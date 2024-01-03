@@ -1,0 +1,96 @@
+.policy-main{
+    background-color: $bg_light_blue;
+    padding-top: 17.3rem;
+    min-height: 36.8rem;
+    border-radius: 4rem;
+    margin-bottom: 6.7rem;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 962px){
+        padding-top: 9rem;
+        min-height: 25.8rem;
+        border-radius: 0 0 2rem 2rem;
+        margin-bottom: 4rem
+    }
+
+    &__title{
+        color: $text;
+
+        @media (max-width: 962px){
+            font-size: 2.8rem;
+        }
+    }
+    &__cloud1{
+        top: 12.9rem;
+        position: absolute;
+        left: -8.2rem;
+
+        @media (max-width: 962px){
+            top: 15.3rem;
+            left: -7.8rem;
+        }
+
+        svg{
+            width: 32.6rem;
+            height: 14.3rem;
+        }
+    }
+    &__cloud2{
+        top: 20rem;
+        position: absolute;
+        right: -7.2rem;
+
+        @media (max-width: 962px){
+           top: 7.3rem;
+           right: -3.6rem;
+        }
+
+        svg{
+            width: 32.6rem;
+            height: 14.3rem;
+
+            @media (max-width: 962px){
+                width: 13.1rem;
+                height: 8rem;
+             }
+        }
+    }
+    .container{
+        position: relative;
+    }
+}
+
+.policy-content{
+    margin-bottom: 6.7rem;
+
+    &__block{
+        margin-bottom: 3.5rem;
+    }
+
+    &__title{
+        font-size: 4rem;
+        color: $text;
+        font-weight: 800;
+        line-height: 130%;
+        margin-bottom: 3.5rem;
+
+        @media (max-width: 962px){
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__text{
+        color: #6B747C;
+        font-size: 2rem;
+        line-height: 140%;
+        margin-bottom: 2rem;
+        max-width: 127.9rem;
+
+        @media (max-width: 962px){
+            font-size: 1.96rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+}

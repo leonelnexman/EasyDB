@@ -1,0 +1,144 @@
+// COLORS
+
+$text: #2D384E;
+$text-light: #6B747C;
+$text_light_default: #6B747C;
+$border: #D1DAE3;
+$border-light: #E8E8E8;
+$white: #FFFFFF;
+$white_70:rgba(255,255,255,0.70);
+$white_50:rgba(255,255,255,0.50);
+$white_20:rgba(255,255,255,0.20);
+$primary: #5DB1FF;
+$hover: #1A91FF;
+$primary_50: #69B5FF;
+$bg_light_blue: #E6F1FF;
+$bg_light: #F5F9FE;
+$hover_yellow: #FFCC18;
+$btn: #FFD84F;
+
+.h1{
+    font-family: 'Inter';
+    font-size: 5.2rem;
+    font-weight: 900;
+    line-height: 130%; /* 67.6rem */
+    letter-spacing: -0.052rem;
+
+    @media (max-width: 962px){
+        font-size: 3.2rem;
+        letter-spacing: -0.032rem;
+    }
+}
+
+.h2{
+    font-family: 'Inter';
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 130%; /* 52rem */
+    letter-spacing: -0.04rem;
+
+    @media (max-width: 962px){
+        font-size: 2.6rem;
+        letter-spacing: -0.026rem;
+    }
+}
+
+.h3{
+    font-family: 'Inter';
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 130%;
+
+    @media (max-width: 962px){
+        font-size: 2rem;
+    }
+}
+
+.h4{
+    font-family: 'Inter';
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 140%;
+
+    @media (max-width: 962px){
+        font-size: 1.6rem;
+    }
+}
+
+.h4_tin{
+    font-family: 'Inter';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 140%;
+
+    @media (max-width: 962px){
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+}
+
+.display{
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    @media (max-width: 962px){
+        font-size: 2.4rem;
+        letter-spacing: -0.024rem;
+    }
+}
+
+.paragraph{
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 140%;
+
+    @media (max-width: 962px){
+        font-size: 1.6rem;
+    }
+}
+
+
+.body_standart{
+    font-family: 'Inter';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.body_small_bold{
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.body_small{
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 140%; 
+}
+
+.lable{
+    font-family: 'Inter';
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 140%; 
+}
+
+.btn_small{
+    font-family: 'Inter';
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.btn_standart{
+    font-family: 'Inter';
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 130%;
+}

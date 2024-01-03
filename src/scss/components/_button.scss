@@ -1,0 +1,25 @@
+.btn--y{
+    transition: all 0.3s;
+    background-color: $btn;
+    &:hover{
+        background-color: $hover_yellow;
+        transition: all 0.3s;
+    }
+}
+
+.btn--t{
+    transition: all 0.3s;
+    &:hover{
+        color: $hover_yellow;
+        transition: all 0.3s;
+    }
+}
+
+.btn--b{
+    transition: all 0.3s;
+    &:hover{
+        background: $hover;
+        transition: all 0.3s;
+    }
+}
+

@@ -1,0 +1,328 @@
+// Header
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 777;
+    transition: all 0.5s;
+
+    &.transform{
+        position: absolute;
+        transform: translateY(-110%);
+        transition: all 0.7s;
+    }
+    
+    &.fixed{
+        top: 0;
+        position: fixed;
+        transform: translateY(0%);
+        transition: all 0.5s;
+        background-color: #fff;
+        padding-bottom: 2rem;
+        box-shadow: 0rem 1.5rem 2.3rem 0rem rgba(10, 9, 11, 0.04);
+
+        .header__top{
+            display: none;
+        }
+        @media (max-width: 962px){
+            padding: 0.7rem;
+            .container{
+                padding: 0 1.5rem;
+            }
+        }
+    }
+
+    &__top{
+        padding: 0.9rem 1.1rem;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        color: $white;
+        background-color: $primary;
+
+        @media (max-width: 962px){
+            border-radius: 2rem 2rem 0rem 0rem;
+            display: block;
+            border-radius: 0;
+        }
+
+        button{
+            color: $btn;
+        }
+
+    }
+
+    &__menu{
+        .header__btn{
+            display: none;
+        }
+        
+        .header__menu-actions{
+            display: none;
+        }
+
+        .header__menu-top{
+            display: none;
+        }
+
+        @media (max-width: 962px){
+            position: fixed;
+            top: 0;
+            z-index: 7777777777777;
+            background-color: $white;
+            left: 0;
+            right: 0;
+            min-height: 100svh;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 2.5rem;
+            transform: translateY(-100%);
+            transition: all 0.3s;
+
+            &.active{
+                transform: translateY(0%);
+                transition: all 0.3s;
+            }
+
+            .header__menu-top{
+                display: block;
+            }
+
+            .nav{
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .header__menu-top{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 2.2rem;
+
+                .hamburger{
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+
+            .header__phone{
+
+                a{
+                    font-size: 2rem;
+                    color: $text;
+                    font-weight: 600;
+                }
+            }
+
+            .nav__link{
+                font-size: 2rem;
+                font-weight: 700;
+                color: $text;
+            }
+
+            .header__btn{
+                display: block;
+                width: 100%;
+                font-size: 1.4rem;
+            }
+
+            .header__phone{
+                display: block;
+            }
+            .header__menu-actions{
+                display: flex;
+                flex-direction: column;
+                gap: 3.1rem;
+            }
+
+            .header__btns{
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .container{
+        padding-top: 1.6rem;
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+
+        @media (max-width: 962px){
+            gap: 0rem;
+            justify-content: space-between;
+        }
+    }
+
+    .logo{
+        img{
+            width: 10.9rem;
+            height: 5.4rem;
+        }
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin-right: 17.5rem;
+
+        &__link{
+            color: #000;
+            transition: all 0.3s;
+
+            &:hover{
+                color: $hover;
+                transition: all 0.3s;
+            }
+        }
+    }
+    
+    &__actions{
+        display: flex;
+        gap: 3rem;
+    }
+
+    &__btn{
+        padding: 1.3rem 2.5rem 1.4rem;
+        background-color: $btn;
+        border-radius: 4.1rem;
+
+        @media (max-width: 962px){
+            display: none;
+        }
+    }
+
+    &__btns{
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 962px){
+            gap: 1.7rem;
+            
+        }
+    }
+
+    &__phone{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 1.2rem;
+
+        @media (max-width: 962px){
+            display: none;
+        }
+
+        a{
+            transition: all 0.3s;
+            color: #000;
+            &:hover{
+                color: $hover;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__call{
+        color: $text_light;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $hover;
+            transition: all 0.3s;
+        }
+    }
+
+    &__btns-telegram{
+        width: 4.4rem;
+        height: 4.4rem;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 2rem;
+        transition: all 0.3s;
+
+        @media (max-width: 962px){
+            margin-right: 0;
+        }
+
+        svg{
+            width: 2rem;
+            height: 2rem;;
+        }
+        &:hover{
+            background: $hover;
+            transition: all 0.3s;
+        }
+    }
+
+    &__btns-account{
+        width: 4.4rem;
+        height: 4.4rem;
+        border: 0.1rem solid $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 0.3s;
+
+        svg{
+            width: 2rem;
+            height: 2rem;;
+        }
+
+        &:hover{
+            background: $hover;
+            transition: all 0.3s;
+            svg path{
+                stroke: $white; 
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.hamburger-close{
+
+    @media (max-width: 962px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        border: 0.1rem solid $primary;
+    }
+}
+
+.hamburger{
+    display: none;
+    
+    @media (max-width: 962px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        border: 0.1rem solid $primary;
+        span{
+            display: block;
+            width: 1.7rem;
+            height: 0.1rem;
+            background-color: $primary;
+        }
+    }
+}

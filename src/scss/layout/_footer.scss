@@ -1,0 +1,243 @@
+.footer{
+    position: relative;
+    background-color: $bg_light_blue;
+    &__wrapper{
+        padding: 5.5rem 0 4.2rem;
+        background-color: $text;
+        border-radius: 4rem 4rem 0rem 0rem;
+
+        @media (max-width: 962px){
+            border-radius: 2rem 2rem 0rem 0rem;
+        }
+    }
+    &__bottom{
+        display: none;
+
+        @media (max-width: 962px){
+            display: block;
+            order: 5;
+            padding-top: 3rem;
+            border-top: 0.1rem solid rgba($color: #fff, $alpha: 0.15);
+            .nexman{
+                margin-bottom: 2rem;
+            }
+            .footer__policy{
+                display: block;
+            }
+            .footer__person{
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .container{
+        display: flex;
+
+        @media (max-width: 962px){
+           flex-direction: column;
+        }
+    }
+
+    &__logo{
+        width: 10rem;
+        height: 5rem;
+        margin-bottom: 2.6rem;
+
+    }
+
+    &__go-top{
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -1.7rem;
+        right: 5.8rem;
+        cursor: pointer;
+
+        @media (max-width: 962px){
+            right: 1.5rem;
+        }
+
+        svg{
+            width: 1.9rem;
+            height: 1.9rem;
+        }
+    }
+    &__socials{
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3.4rem;
+
+        @media (max-width: 962px){
+            justify-content: center;
+            margin-bottom: 0;
+            padding-bottom: 2.5rem;
+            border-bottom: 0.1rem solid rgba($color: #fff, $alpha: 0.15);
+        }
+
+        a{
+            width: 4.5rem;
+            height: 4.5rem;
+            opacity: 0.2;
+            background-color: $white_50;
+            border-radius: 50%;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 0.4;
+                transition: all 0.3s;
+            }
+        }
+    }
+    &__policy{
+       color: $white_50;
+       margin-bottom: 1rem;
+       transition: all 0.3s;
+
+       @media (max-width: 962px){
+            display: none;
+        }
+
+       &:hover{
+           color: $hover_yellow;
+           transition: all 0.3s;
+       }
+    }
+    &__person{
+        color: $white_50;
+        transition: all 0.3s;
+
+        @media (max-width: 962px){
+            display: none;
+        }
+        
+        &:hover{
+            color: $hover_yellow;
+            transition: all 0.3s;
+        }
+    }
+    &__right{
+        margin-right: 10.8rem;
+
+        @media (max-width: 962px){
+            text-align: center;
+            margin-right: 0;
+            order: 0;
+         }
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 39.4rem;
+
+        @media (max-width: 962px){
+            order: 3;
+            flex-wrap: wrap;
+            max-height: 15rem;
+            gap: 1rem 5.1rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__link{
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 140%;
+        color: $white_70;
+        transition: all 0.3s;
+
+        @media (max-width: 962px){
+            min-width: 12.3rem;
+        }
+
+        &:hover{
+            color: $hover_yellow;
+            transition: all 0.3s;
+        }
+    }
+    &__btn{
+        display: flex;
+        background-color: $btn;
+        max-height: 7.7rem;
+        padding: 1.5rem 3rem 1.5rem 2rem;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 1.5rem;
+        margin-right: 5.8rem;
+
+        @media (max-width: 962px){
+            margin-right: 0;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        svg{
+            width: 4rem;
+            height: 4rem;
+        }
+        @media (max-width: 962px){
+            order: 2;
+         }
+    }
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media (max-width: 962px){
+            order: 1;
+            align-items: center;
+            padding-top: 2.5rem;
+            .nexman{
+                display: none;
+            }
+            .descriptor{
+                display: none;
+            }
+        }
+    }
+    &__tel{
+        color: $white;
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+        &:hover{
+            color: $hover_yellow;
+            transition: all 0.3s;
+        }
+    }
+    &__mail{
+        color: $white;
+        margin-bottom: 7.8rem;
+        transition: all 0.3s;
+
+        @media (max-width: 962px){
+            margin-bottom: 3.5rem;
+        }
+
+        &:hover{
+            color: $hover_yellow;
+            transition: all 0.3s;
+        }
+    }
+    .nexman{
+        font-size: 1.6rem;
+        color: $white_70;
+        margin-bottom: 1.7rem;
+        span{
+            color: $white;
+            font-weight: 900;
+            transition: all 0.3s;
+            &:hover{
+                color: $hover_yellow;
+                transition: all 0.3s;
+            }
+        }
+    }
+    .descriptor{
+        font-size: 1.2rem;
+        color: $white_50;
+    }
+}
