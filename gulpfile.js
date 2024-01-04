@@ -16,11 +16,15 @@ function images(){
 }
 
 function styles() {
-    return src('src/scss/**/*.scss')
-    .pipe(concat('style.min.css'))
-    .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(dest('src/css'))
-    .pipe(browserSync.stream())
+    // Paths to your SCSS files and Swiper styles in node_modules
+    const scssFiles = 'src/scss/**/*.scss';
+    const swiperStyles = 'node_modules/swiper/swiper-bundle.min.css';
+
+    return src([swiperStyles, scssFiles])
+        .pipe(concat('style.min.css'))
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(dest('src/css'))
+        .pipe(browserSync.stream());
 }
 
 function scripts() {

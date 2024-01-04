@@ -900,6 +900,17 @@
         margin-bottom: 5rem;
     }
 
+    &__link{
+        img{
+            width: 22.3rem;
+            height: 19.5rem;
+            
+            @media (max-width: 962px){
+               display: none;
+            }
+        }
+    }
+
     &__title{
         text-align: center;
         font-size: 12.6rem;
