@@ -19,7 +19,6 @@ function styles() {
     // Paths to your SCSS files and Swiper styles in node_modules
     const scssFiles = 'src/scss/**/*.scss';
     const swiperStyles = 'node_modules/swiper/swiper-bundle.min.css';
-
     return src([swiperStyles, scssFiles])
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))

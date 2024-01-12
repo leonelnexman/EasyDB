@@ -1484,7 +1484,6 @@
 .multifunctional{
     background-color: $white;
     position: relative;
-
     .section__title{
         @media (max-width: 962px){
             margin-bottom: 3rem;
@@ -1742,6 +1741,11 @@
         color: $text_light;
         @media (max-width: 962px){
             font-size: 1.4rem;
+        }
+    }
+    &__slider{
+        @media (max-width: 962px){
+            margin-bottom: 5.1rem;
         }
     }
 }
