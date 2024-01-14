@@ -2,7 +2,7 @@
   "name": "gulp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "homepage": "https://leonelnexman.github.io/EasyDB/",
   "scripts": {
     "deploy": "gh-pages -d dist"
@@ -10,11 +10,14 @@
   "author": "RESHEV",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
     "browser-sync": "^2.29.3",
     "gh-pages": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-avif": "^1.1.1",
+    "gulp-babel": "^8.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -24,6 +27,6 @@
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^5.0.0",
     "sass": "^1.69.5",
-    "swiper": "^11.0.5"
+    "swiper": "^9.0.0"
   }
 }
