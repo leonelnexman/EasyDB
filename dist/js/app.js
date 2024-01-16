@@ -1,5 +1,3 @@
-
-
 import { SwiperInit } from './components/swiperinit.js';
 import { Tabs } from './components/tabs.js';
 import { Accordion } from './components/accordion.js';

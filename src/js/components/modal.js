@@ -9,19 +9,25 @@ export class Modal {
 
       // JavaScript to close the modal when the close button is clicked
       document.getElementById('closeModalBtn').addEventListener('click', function () {
-        document.getElementById('myModal').style.display = '';
+        closeModal();
       });
 
       // Close the modal if the overlay (outside the modal) is clicked
       window.addEventListener('click', function (event) {
         const modal = document.getElementById('myModal');
         if (event.target === modal) {
-          modal.style.display = 'none';
+          closeModal();
         }
       });
-    });
 
-    document.addEventListener('DOMContentLoaded', function () {
+      // Event listener for the button with class 'modal__successfully-btn'
+      document.querySelector('.modal__successfully-btn').addEventListener('click', function () {
+        closeModal();
+        // Remove any added classes from the modal__content element
+        const modalContent = document.querySelector('.modal__content');
+        modalContent.classList.remove('successfully', 'error', /* ... */);
+      });
+
       const goTopButton = document.querySelector('.footer__go-top');
 
       goTopButton.addEventListener('click', function () {
@@ -32,5 +38,9 @@ export class Modal {
         });
       });
     });
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = '';
+    }
   }
 }
