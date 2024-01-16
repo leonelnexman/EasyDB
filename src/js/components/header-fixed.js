@@ -1,34 +1,35 @@
 export class Fixed {
-    constructor() {
-        // Добавляем слушатель события DOMContentLoaded
-        window.addEventListener("DOMContentLoaded", function() {
-          let prevScrollPos = window.pageYOffset;
-    
-          // Добавляем слушатель события прокрутки страницы
-          window.onscroll = function() {
-            const currentScrollPos = window.pageYOffset;
-    
-            // Проверяем наличие элемента с классом "header"
-            const headerElement = document.querySelector(".header");
-            if (headerElement) {
-              if (prevScrollPos > currentScrollPos) {
-                // Скролл вверх
-                headerElement.classList.add("fixed");
-              } else {
-                // Скролл вниз
-                headerElement.classList.remove("fixed");
-              }
-    
-              // Добавление класса "transform" при скролле на 200px вниз
-              if (currentScrollPos > 200) {
-                headerElement.classList.add("transform");
-              } else {
-                headerElement.classList.remove("transform");
-              }
-    
-              prevScrollPos = currentScrollPos;
-            }
-          };
-        });
+  constructor() {
+    var header = document.querySelector('.header');
+    var prevScrollPos = window.pageYOffset;
+
+    // Обработчик события скролла
+    window.addEventListener('scroll', function() {
+      var currentScrollPos = window.pageYOffset;
+
+      // Проверяем направление скролла
+      if (currentScrollPos > prevScrollPos) {
+        // Скролл вниз
+        header.classList.remove('fixed');
+      } else {
+        // Скролл вверх
+        // Проверяем, что расстояние до верхней границы экрана больше 300px перед добавлением класса 'fixed'
+        if (currentScrollPos > 300) {
+          header.classList.add('fixed');
+        } else {
+          header.classList.remove('fixed');
+        }
       }
+
+      // Обновляем предыдущую позицию скролла
+      prevScrollPos = currentScrollPos;
+
+      // Если скролл больше 200px, добавляем класс transform, иначе удаляем
+      if (currentScrollPos > 200) {
+        header.classList.add('transform');
+      } else {
+        header.classList.remove('transform');
+      }
+    });
+  }
 }

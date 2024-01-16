@@ -1,3 +1,5 @@
+
+
 export class SwiperInit {
   constructor() {
     document.addEventListener('DOMContentLoaded', () => {
