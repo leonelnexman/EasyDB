@@ -31,6 +31,13 @@ function scripts() {
     .pipe(browserSync.stream())
 }
 
+function swiperScript() {
+    return src('node_modules/swiper/swiper-bundle.js')
+        .pipe(concat('swiper.js')) 
+        .pipe(dest('src/js')) 
+        .pipe(browserSync.stream());
+}
+
 function building(){
     return src([
         'src/css/style.min.css',
@@ -65,6 +72,7 @@ exports.scripts = scripts;
 exports.watching =  watching;
 exports.building =  building;
 exports.images =  images;
+exports.swiperScript - swiperScript;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, scripts, watching);
+exports.default = parallel(styles, scripts, swiperScript,  watching);
