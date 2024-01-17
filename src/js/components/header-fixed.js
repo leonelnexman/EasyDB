@@ -14,7 +14,7 @@ export class Fixed {
       } else {
         // Скролл вверх
         // Проверяем, что расстояние до верхней границы экрана больше 300px перед добавлением класса 'fixed'
-        if (currentScrollPos > 700) {
+        if (currentScrollPos > 300) {
           header.classList.add('fixed');
         } else {
           header.classList.remove('fixed');
@@ -25,7 +25,7 @@ export class Fixed {
       prevScrollPos = currentScrollPos;
 
       // Если скролл больше 200px, добавляем класс transform, иначе удаляем
-      if (currentScrollPos > 700) {
+      if (currentScrollPos > 300) {
         header.classList.add('transform');
       } else {
         header.classList.remove('transform');
