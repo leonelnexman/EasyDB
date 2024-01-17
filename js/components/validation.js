@@ -30,6 +30,7 @@ export class Validation {
   
     setupModalForm() {
       const form1 = document.querySelector(".modal__form");
+      const inputFields = form1.querySelectorAll("input");
       const EMAIL_REGEXP1 = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
   
       form1.addEventListener("submit", (e) => {
@@ -50,7 +51,7 @@ export class Validation {
               errorLabel.classList.remove('active');
             }
           } else {
-            if (this.containsDigitOrEmpty(input.value)) {
+            if (!this.containsDigitOrEmpty(input.value)) {
               errorLabel.classList.remove('active');
             } else {
               errorLabel.classList.add('active');
@@ -64,10 +65,39 @@ export class Validation {
           modal.querySelector('.modal__content').classList.add('successfully');
         }
       });
+
+      function handleInputChange(event) {
+        const currentInput = event.target;
+        const errorLabel = currentInput.parentElement.querySelector(".error-txt");
+        
+        if (currentInput.type === "text") {
+          if (!currentInput.value || /\d/.test(currentInput.value))  {
+            errorLabel.classList.add('active');
+        } else {
+            errorLabel.classList.remove('active');
+        }
+        } else {
+          if (currentInput.value.length < 17) {
+            errorLabel.classList.add('active');
+          } else {
+            errorLabel.classList.remove('active');
+          }
+        }
+      }
+      
+      inputFields.forEach((input) => {
+        input.addEventListener("input", handleInputChange);
+      });
     }
   
     containsDigitOrEmpty(inputString) {
-      return !inputString || /\d/.test(inputString);
+      // Если строка пустая или содержит цифры, возвращаем true
+      if (!inputString || /\d/.test(inputString)) {
+          return true;
+      }
+
+      // Если в строке только буквы, возвращаем false
+      return false;
     }
   }
   
