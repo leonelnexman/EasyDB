@@ -2,7 +2,8 @@ export class Modal {
   constructor() {
     document.addEventListener('DOMContentLoaded', function () {
       document.body.addEventListener('click', function (event) {
-        if (event.target.classList.contains('open-modal')) {
+        const openModalBtn = event.target.closest('.open-modal');
+        if (openModalBtn) {
           document.getElementById('myModal').style.display = 'flex';
         }
       });
