@@ -11,15 +11,18 @@ export class Validation {
       const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
   
       form.addEventListener("submit", (e) => {
+        e.preventDefault();
         const input = form.querySelector('input[type="text"]');
         const errorLabel = form.querySelector(".error-txt");
   
         if (input && errorLabel) {
           if (!EMAIL_REGEXP.test(input.value)) {
             errorLabel.style.display = 'block';
-            e.preventDefault();
           } else {
             errorLabel.style.display = 'none';
+            const modal = document.querySelector("#myModal");
+            modal.style.display = 'flex';
+            modal.querySelector('.modal__content').classList.add('successfully');
           }
         }
       });
