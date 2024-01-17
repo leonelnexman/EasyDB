@@ -37,6 +37,8 @@ export class Modal {
 
     const closeModal = () => {
       document.getElementById('myModal').style.display = '';
+      const modalContent = document.querySelector('.modal__content');
+      modalContent.classList.remove('successfully', 'error');
     };
   }
 }
