@@ -106,7 +106,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="main-section">
+            <section class="main-section" itemscope itemtype="https://schema.org/WebPage">
                 <div class="cloud--first">
                     <svg xmlns="http://www.w3.org/2000/svg" width="326" height="143" viewBox="0 0 326 143" fill="none">
                         <path d="M307.049 104.958C305.027 104.958 303.069 105.27 301.248 105.864C301.575 104.125 301.739 102.342 301.739 100.514C301.739 83.7674 288.207 70.1991 271.523 70.1991C262.079 70.1991 253.637 74.5543 248.1 81.3594C243.765 59.7527 224.759 43.4812 201.947 43.4812C192.37 43.4812 183.443 46.349 176.012 51.2975C176.116 50.4802 176.16 49.6483 176.16 48.8008C176.16 36.9869 166.627 27.4026 154.858 27.4026C151.912 27.4026 149.1 27.9968 146.539 29.0957C145.591 12.8689 132.179 0 115.777 0C104.808 0 95.1709 5.76571 89.7087 14.4587C83.9795 11.7838 77.5848 10.2982 70.8484 10.2982C46.0232 10.2982 25.9062 30.4934 25.9062 55.4131C25.9062 61.4467 27.0901 67.1979 29.2366 72.4434C12.6121 75.356 0 89.919 0 107.439C0 127.085 15.8541 143 35.4238 143H307.049C317.522 143 326 134.484 326 123.979C326 113.473 317.522 104.958 307.049 104.958Z" fill="url(#paint0_linear_267_6083)"/>
@@ -140,49 +140,56 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="container">
-                    <h1 class="main-section__title h1">Облачная база данных MongoDB и CouchDB, Rest API</h1>
+                <div class="container" itemprop="mainEntity" itemscope itemtype="https://schema.org/Service">
+                    <h1 class="main-section__title h1" itemprop="name">Облачная база данных MongoDB и CouchDB, Rest API</h1>
                     <h2 class="main-section__suptitle h1">у вас уже через минуту</h2>
-                    <p class="main-section__text ПК body_standart">Мы решили вопросы быстродействия, доступности, масштабирования и резервирования баз данных. Просто - пользуйтесь.</p>
+                    <p class="main-section__text ПК body_standart" itemprop="description">Мы решили вопросы быстродействия, доступности, масштабирования и резервирования баз данных. Просто - пользуйтесь.</p>
                     <div class="main-section__btns">
-                        <button class="main-section__rashet btn_standart btn--y" onclick="location.href='/EasyDB/#calc';">Рассчитать стоимость</ф>
-                        <button class="main-section__case btn_standart  btn--b" onclick="location.href='/EasyDB/#cases';">Посмотреть кейсы</button>
+                        <button class="main-section__rashet btn_standart btn--y" onclick="location.href='/EasyDB/#calc';" itemprop="potentialAction" itemscope itemtype="https://schema.org/ViewAction">
+                            <span itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
+                                <meta itemprop="url" content="/EasyDB/#calc">
+                            </span>
+                            Рассчитать стоимость
+                        </button>
+                        <button class="main-section__case btn_standart btn--b" onclick="location.href='/EasyDB/#cases';" itemprop="potentialAction" itemscope itemtype="https://schema.org/ViewAction">
+                            <span itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
+                                <meta itemprop="url" content="/EasyDB/#cases">
+                            </span>
+                            Посмотреть кейсы
+                        </button>
                     </div>
-                    <p class="main-section__descr body_small"><span class="body_small_bold">EasyDB</span> — больше чем аналог сервисов IBM Cloudant, Mongo Atlas, Couch DB, Managed DB, Google Cloud</p>
+                    <p class="main-section__descr body_small" itemprop="additionalType">EasyDB — больше чем аналог сервисов IBM Cloudant, Mongo Atlas, Couch DB, Managed DB, Google Cloud</p>
                 </div>
             </section>
-            <section class="cases" id="cases">
+            <section class="cases" id="cases" itemscope itemtype="https://schema.org/WebPage">
                 <div class="container">
                     <h2 class="cases__title h2">Кейсы</h2>
-                    <p class="cases__text paragraph">
-                        Создавайте современные приложения - есть авторизация, есть база данных, есть Rest API - надо писать только интерфейсы/приложения
-                    </p>
+                    <p class="cases__text paragraph">Создавайте современные приложения - есть авторизация, есть база данных, есть Rest API - надо писать только интерфейсы/приложения</p>
                     <div class="cases__tabs">
                         <button class="cases__tab h4 active">Для мобильных приложений</button>
                         <button class="cases__tab h4">Для веб-приложений</button>
                     </div>
-                    <div class="cases__wrapper">
-                        <div class="cases__block active">
+                    <div class="cases__wrapper" itemprop="mainEntity" itemscope itemtype="https://schema.org/ItemList">
+                        <!-- Для мобильных приложений -->
+                        <div class="cases__block active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <meta itemprop="position" content="1" />
                             <div class="cases__info">
                                 <p class="cases__info-text h4">Создавайте мобильные приложения любого масштаба, а мы позаботимся об авторизации и данных</p>
-                                <div class="cases__item active">
-                                    <div class="cases__number h4">
-                                        01
-                                    </div>
+                                <div class="cases__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="1" />
+                                    <div class="cases__number h4">01</div>
                                     Размещаете Frontend на Google Play
                                 </div>
-                                <div class="cases__item">
-                                    <div class="cases__number h4">
-                                        02
-                                    </div>
+                                <div class="cases__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="2" />
+                                    <div class="cases__number h4">02</div>
                                     Загружаете контент в облако или S3
                                 </div>
-                                <div class="cases__item">
-                                    <div class="cases__number h4">
-                                        03
-                                    </div>
-                                    Все данные приложения - храните на EasyDB 
-                                    <span class="info">
+                                <div class="cases__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="3" />
+                                    <div class="cases__number h4">03</div>
+                                    Все данные приложения - храните на EasyDB
+                                    <span class="info" itemprop="description">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                                             <path d="M7.9987 15.1666C11.6806 15.1666 14.6654 12.1818 14.6654 8.4999C14.6654 4.818 11.6806 1.83323 7.9987 1.83323C4.3168 1.83323 1.33203 4.818 1.33203 8.4999C1.33203 12.1818 4.3168 15.1666 7.9987 15.1666Z" stroke="#6B747C" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M8 11.1667V8.5" stroke="#6B747C" stroke-linecap="round" stroke-linejoin="round"/>
@@ -195,30 +202,30 @@
                                 </div>
                             </div>
                             <div class="cases__img">
-                                <img src="./images/mobile.jpg" alt="">
+                                <img src="./images/mobile.jpg" alt="" itemprop="image">
                             </div>
                         </div>
-                        <div class="cases__block">
+            
+                        <!-- Для веб-приложений -->
+                        <div class="cases__block" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <meta itemprop="position" content="2" />
                             <div class="cases__info">
                                 <p class="cases__info-text h4">Создавайте веб-приложения любого размера, а данные, авторизацию, RestAPI поручите нам.</p>
-                                <div class="cases__item active">
-                                    <div class="cases__number h4">
-                                        01
-                                    </div>
+                                <div class="cases__item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="1" />
+                                    <div class="cases__number h4">01</div>
                                     Размещаете Frontend веб-приложения на хостинге
                                 </div>
-                                <div class="cases__item">
-                                    <div class="cases__number h4">
-                                        02
-                                    </div>
+                                <div class="cases__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="2" />
+                                    <div class="cases__number h4">02</div>
                                     Картинки, видео - на Яндекс Диск или S3
                                 </div>
-                                <div class="cases__item">
-                                    <div class="cases__number h4">
-                                        03
-                                    </div>
+                                <div class="cases__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="3" />
+                                    <div class="cases__number h4">03</div>
                                     Все данные приложения - храните на EasyDB
-                                    <span class="info">
+                                    <span class="info" itemprop="description">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                                             <path d="M7.9987 15.1666C11.6806 15.1666 14.6654 12.1818 14.6654 8.4999C14.6654 4.818 11.6806 1.83323 7.9987 1.83323C4.3168 1.83323 1.33203 4.818 1.33203 8.4999C1.33203 12.1818 4.3168 15.1666 7.9987 15.1666Z" stroke="#6B747C" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M8 11.1667V8.5" stroke="#6B747C" stroke-linecap="round" stroke-linejoin="round"/>
@@ -231,42 +238,42 @@
                                 </div>
                             </div>
                             <div class="cases__img">
-                                <img src="./images/mobile.jpg" alt="">
+                                <img src="./images/mobile.jpg" alt="" itemprop="image">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="rates" id="rates">
+            <section itemscope itemtype="https://schema.org/PricingPlan" class="rates" id="rates">
                 <div class="container">
                     <h2 class="section__title h2">Тарифы</h2>
                     <p class="section__text paragraph">
                         Выбирайте тариф в зависимости от вашей задачи и настраивайте его в процессе. Также вы можете попробовать бесплатный тариф и оценить возможности продукта
                     </p>
-                    <div class="rates__table-wrapper">
-                        <table class="rates__table">
+                    <div class="rates__table-wrapper" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+                        <table class="rates__table" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
                             <tr>
-                               <th></th>
-                               <th>
+                                <th></th>
+                                <th>
                                     <div class="rates__th--blue-ligt h2">
-                                        free
-                                        <p class="">Бесплатно</p>
+                                        <span itemprop="name">free</span>
+                                        <p class="" itemprop="description">Бесплатно</p>
                                     </div>
-                               </th>
-                               <th>
-                                <div class="rates__th--blue-dark h2">
-                                    Standart
-                                    <p class="">от 240 ₽/мес</p>
-                                </div>
-                               </th>
+                                </th>
+                                <th>
+                                    <div class="rates__th--blue-dark h2" itemprop="name">
+                                        Standart
+                                        <p class="" itemprop="description">от 240 ₽/мес</p>
+                                    </div>
+                                </th>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Тип БД</td>
-                                <td class="h4_tin">MongoDB / CouchDB</td>
-                                <td class="h4_tin">MongoDB / CouchDB</td>
+                                <td class="h4_tin" itemprop="category">Тип БД</td>
+                                <td class="h4_tin" itemprop="category">MongoDB / CouchDB</td>
+                                <td class="h4_tin" itemprop="category">MongoDB / CouchDB</td>
                             </tr>
                             <tr>
-                                <td>REST API</td>
+                                <td itemprop="category">REST API</td>
                                 <td>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                         <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -279,177 +286,181 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Storage GB</td>
-                                <td class="h4_tin">1</td>
-                                <td class="h4_tin">20 (+1Гб за 150р/мес)</td>
+                                <td class="h4_tin" itemprop="category">Storage GB</td>
+                                <td class="h4_tin" itemprop="category">1</td>
+                                <td class="h4_tin" itemprop="category">20 (+1Гб за 150р/мес)</td>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Срок хранения</td>
-                                <td class="h4_tin">Неограниченно</td>
-                                <td class="h4_tin">Неограниченно</td>
+                                <td class="h4_tin" itemprop="category">Срок хранения</td>
+                                <td class="h4_tin" itemprop="category">Неограниченно</td>
+                                <td class="h4_tin" itemprop="category">Неограниченно</td>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Reads / second</td>
-                                <td class="h4_tin">20</td>
-                                <td class="h4_tin">100 (+20 за 30р/мес)</td>
+                                <td class="h4_tin" itemprop="category">Reads / second</td>
+                                <td class="h4_tin" itemprop="category">20</td>
+                                <td class="h4_tin" itemprop="category">100 (+20 за 30р/мес)</td>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Writes / second</td>
-                                <td class="h4_tin">10</td>
-                                <td class="h4_tin">50 (+10 за 60р/мес)</td>
+                                <td class="h4_tin" itemprop="category">Writes / second</td>
+                                <td class="h4_tin" itemprop="category">10</td>
+                                <td class="h4_tin" itemprop="category">50 (+10 за 60р/мес)</td>
                             </tr>
                             <tr>
-                                <td class="h4_tin">Выделенный инстанс</td>
-                                <td class="h4_tin"></td>
-                                <td class="h4_tin">15 000р/мес</td>
+                                <td class="h4_tin" itemprop="category">Выделенный инстанс</td>
+                                <td class="h4_tin" itemprop="category"></td>
+                                <td class="h4_tin" itemprop="category">15 000р/мес</td>
                             </tr>
                             <tr>
-                                <td class="h4_tin bg-none"></td>
-                                <td class="h4_tin">
-                                    <button class="go-free btn--y btn_standart open-modal">Начать бесплатно</button>
+                                <td class="h4_tin bg-none" itemprop="category"></td>
+                                <td class="h4_tin" itemprop="category">
+                                    <button class="go-free btn--y btn_standart open-modal" itemprop="url">Начать бесплатно</button>
                                 </td>
-                                <td class="h4_tin">
-                                    <button class="go-job btn--y btn_standart open-modal">Начать работу</button>
+                                <td class="h4_tin" itemprop="category">
+                                    <button class="go-job btn--y btn_standart open-modal" itemprop="url">Начать работу</button>
                                 </td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </section>
-            <section class="aditions">
-                <div class="container">
-                    <div class="aditions__item">
-                        <div class="aditions__item-top h3">
-                            Additions
-                            <div class="close">
-                                <span></span>
-                                <span></span>
+            <section itemscope itemtype="https://schema.org/Service">
+                <div class="aditions">
+                    <div class="container">
+                        <div class="aditions__item" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+                            <div class="aditions__item-top h3" itemprop="name">
+                                Additions
+                                <div class="close">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="aditions__item-content">
-                           <table class="aditions__table">
-                            <tr>
-                                <th class="h4_tin"></th>
-                                <th class="h4_tin">FREE</th>
-                                <th class="h4_tin">Standart</th>
-                            </tr>
-                             <tr>
-                                 <td class="h4_tin">Backup</td>
-                                 <td class="h4_tin"></td>
-                                 <td class="h4_tin">Dialy</td>
-                             </tr>
-                             <tr>
-                                <td class="h4_tin">Браузер данных</td>
-                                <td class="h4_tin">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                        <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </td>
-                                <td class="h4_tin">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                        <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="h4_tin">Custom DNS</td>
-                                <td class="h4_tin"></td>
-                                <td class="h4_tin">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                        <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="h4_tin">Data Migration</td>
-                                <td class="h4_tin"></td>
-                                <td class="h4_tin">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                                        <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="h4_tin">Webhook</td>
-                                <td class="h4_tin"></td>
-                                <td class="h4_tin">Скоро</td>
-                            </tr>
-                           </table>
+                            <div class="aditions__item-content" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                                <table class="aditions__table">
+                                    <tr>
+                                        <th class="h4_tin"></th>
+                                        <th class="h4_tin" itemprop="additionalProperty">FREE</th>
+                                        <th class="h4_tin" itemprop="additionalProperty">Standart</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="h4_tin" itemprop="additionalProperty">Backup</td>
+                                        <td class="h4_tin" itemprop="additionalProperty"></td>
+                                        <td class="h4_tin" itemprop="additionalProperty">Dialy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h4_tin" itemprop="additionalProperty">Браузер данных</td>
+                                        <td class="h4_tin" itemprop="additionalProperty">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                                <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </td>
+                                        <td class="h4_tin" itemprop="additionalProperty">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                                <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h4_tin" itemprop="additionalProperty">Custom DNS</td>
+                                        <td class="h4_tin" itemprop="additionalProperty"></td>
+                                        <td class="h4_tin" itemprop="additionalProperty">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                                <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h4_tin" itemprop="additionalProperty">Data Migration</td>
+                                        <td class="h4_tin" itemprop="additionalProperty"></td>
+                                        <td class="h4_tin" itemprop="additionalProperty">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                                <path d="M2 11.5882L9.61538 19L24 5" stroke="#1FA82D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="h4_tin" itemprop="additionalProperty">Webhook</td>
+                                        <td class="h4_tin" itemprop="additionalProperty"></td>
+                                        <td class="h4_tin" itemprop="additionalProperty">Скоро</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="calc" id="calc">
-                <div class="container">
-                    <h2 class="calc__title">Калькулятор тарифа</h2>
-                    <div class="calc__wrapper">
-                        <div class="calc__calculator">
-                            <div class="calc__calculator-title h3">
-                                Рассчитайте тариф, который подойдет под ваши нужды
+            <section itemscope itemtype="https://schema.org/Product">
+                <div class="calc" id="calc">
+                    <div class="container">
+                        <h2 class="calc__title" itemprop="name">Калькулятор тарифа</h2>
+                        <div class="calc__wrapper">
+                            <div class="calc__calculator">
+                                <div class="calc__calculator-title h3" itemprop="description">
+                                    Рассчитайте тариф, который подойдет под ваши нужды
+                                </div>
+                                <form class="calc__form" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <div class="calc__range">
+                                        <div class="calc__range-name h4">Записи в секунду</div>
+                                        <div class="calc__block">
+                                            <div class="line-step">
+                                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                            </div>
+                                            <input type="range" value="270" min="50" max="500" itemprop="additionalProperty" aria-labelledby="rangeLabel1">
+                                            <div class="digit">
+                                                <span>50</span><span>250</span><span>500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc__range">
+                                        <div class="calc__range-name h4">Записи в секунду</div>
+                                        <div class="calc__block">
+                                            <div class="line-step">
+                                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                            </div>
+                                            <input type="range" value="50" min="1" max="100" itemprop="additionalProperty" aria-labelledby="rangeLabel2">
+                                            <div class="digit">
+                                                <span>1</span><span>50</span><span>100</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc__range">
+                                        <div class="calc__range-name h4">Объем памяти, Гб</div>
+                                        <div class="calc__block">
+                                            <div class="line-step">
+                                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                            </div>
+                                            <input type="range" value="2000" min="20" max="4000" itemprop="additionalProperty" aria-labelledby="rangeLabel3">
+                                            <div class="digit">
+                                                <span>20</span><span>2000</span><span>4000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc__lable">
+                                        <input type="checkbox" id="checkbox" itemprop="additionalProperty" aria-labelledby="checkboxLabel">
+                                        <label for="checkbox" class="body_standart" id="checkboxLabel">Выделенный инстанс</label>
+                                    </div>
+                                </form>
+                                <div class="calc__itog" itemprop="priceSpecification" itemscope itemtype="https://schema.org/PriceSpecification">
+                                    <div class="calc__itog-content">
+                                        <div class="calc__itog-text h4">Стоимость тарифа</div>
+                                        <div class="calc__itog-price h2" itemprop="price">240 ₽/мес</div>
+                                    </div>
+                                    <button class="calc__itog-btn btn btn--y" itemprop="availability" href="https://example.com/checkout">Начать работу</button>
+                                </div>
                             </div>
-                            <form class="calc__form">
-                                <div class="calc__range">
-                                    <div class="calc__range-name h4">Записи в секунду</div>
-                                    <div class="calc__block">
-                                        <div class="line-step">
-                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                        </div>
-                                        <input type="range" value="270" min="50" max="500">
-                                        <div class="digit">
-                                            <span>50</span><span>250</span><span>500</span>
-                                        </div>
+                            <div class="calc__link open-modal">
+                                <img src="./images/calc.svg" alt="">
+                                <div class="calc__link-content">
+                                    <div class="calc__link-wrapper">
+                                        <div class="calc__link-name h2">Попробуйте бесплатно</div>
+                                        <p class="calc__link-text h3">Чтобы убедиться в надежности</p>
                                     </div>
+                                    <button class="calc__link-btn btn btn--y open-modal" itemprop="url" href="https://example.com/free-trial">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                            <path d="M1.5 8C8.91996 8 13.08 8 20.5 8M20.5 8L14.0275 1.5M20.5 8L14.0275 14.5" stroke="#2D384E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
                                 </div>
-                                <div class="calc__range">
-                                    <div class="calc__range-name h4">Записи в секунду</div>
-                                    <div class="calc__block">
-                                        <div class="line-step">
-                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                        </div>
-                                        <input type="range" value="50" min="1" max="100">
-                                        <div class="digit">
-                                            <span>1</span><span>50</span><span>100</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="calc__range">
-                                    <div class="calc__range-name h4">Объем памяти, Гб</div>
-                                    <div class="calc__block">
-                                        <div class="line-step">
-                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                        </div>
-                                        <input type="range" value="2000" min="20" max="4000">
-                                        <div class="digit">
-                                            <span>20</span><span>2000</span><span>4000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="calc__lable">
-                                    <input type="checkbox" id="checkbox">
-                                    <label for="checkbox" class="body_standart">Выделенный инстанс</label>
-                                </div>
-                            </form>
-                            <div class="calc__itog">
-                                <div class="calc__itog-content">
-                                    <div class="calc__itog-text h4">Стоимость тарифа</div>
-                                    <div class="calc__itog-price h2">240 ₽/мес</div>
-                                </div>
-                                <button class="calc__itog-btn btn btn--y">Начать работу</button>
                             </div>
-                        </div>
-                        <div class="calc__link open-modal">
-                            <img src="./images/calc.svg" alt="">
-                              <div class="calc__link-content">
-                                <div class="calc__link-wrapper">
-                                    <div class="calc__link-name h2">Попробуйте бесплатно</div>
-                                    <p class="calc__link-text h3">Чтобы убедиться в надежности</p>
-                                </div>
-                                <button class="calc__link-btn btn btn--y open-modal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
-                                        <path d="M1.5 8C8.91996 8 13.08 8 20.5 8M20.5 8L14.0275 1.5M20.5 8L14.0275 14.5" stroke="#2D384E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                              </div>
                         </div>
                     </div>
                 </div>
@@ -646,17 +657,21 @@
                     </div>
                 </div>
             </section>
-            <section class="newsletter">
-                <div class="container">
-                    <h2 class="newsletter__title h2">Подпишись на рассылку и получи бонус - <span>500₽ на счет</span></h2>
-                    <form class="newsletter__form">
-                        <div class="block-input">
-                            <input id="emailInput" class="newsletter__form-input" type="text" placeholder="Ваш email">
-                        </div>
-                        <button class="newsletter__form-btn btn--y btn">Начать работу</button>
-                        <div class="error-txt">Введите корректные данные</div>
-                        <p class="newsletter__form-descr">Отправляя свои данные я соглашаюсь с <a href="./policy.html">политикой обработки персональных данных</a></p>
-                    </form>
+            <section itemscope itemtype="https://schema.org/Newsletter">
+                <div class="newsletter">
+                    <div class="container">
+                        <h2 class="newsletter__title h2" itemprop="headline">Подпишись на рассылку и получи бонус - <span itemprop="discount">500₽ на счет</span></h2>
+                        <form class="newsletter__form" itemprop="potentialAction" itemscope itemtype="https://schema.org/SubscribeAction">
+                            <div class="block-input">
+                                <input id="emailInput" class="newsletter__form-input" type="email" placeholder="Ваш email" itemprop="email" required>
+                            </div>
+                            <button class="newsletter__form-btn btn--y btn" itemprop="target" type="submit">Начать работу</button>
+                            <div class="error-txt" itemprop="error" style="display:none;">Введите корректные данные</div>
+                            <p class="newsletter__form-descr" itemprop="privacyPolicy">
+                                Отправляя свои данные я соглашаюсь с <a href="./policy.html" itemprop="url">политикой обработки персональных данных</a>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </section>
             <section class="multifunctional">
@@ -1063,7 +1078,7 @@
                              <div class="error-txt">Введите корректные данные</div>
                         </div>
                         <div class="input-box">
-                            <input type="text"  class="modal__form-input tel" placeholder="Номер телефона">
+                            <input type="tel"  class="modal__form-input tel" placeholder="Номер телефона">
                             <div class="error-txt">Введите корректные данные</div>
                         </div>   
                         <button class="modal__form-btn btn btn--y">Оставить заявку</button>

@@ -1629,6 +1629,8 @@
         background: $btn;
         border-radius: 50%;
         transition: all 0.3s;
+        position: relative;
+        z-index: 7;
 
         svg{
             width: 1.9rem;
@@ -1745,6 +1747,7 @@
         }
     }
     &__slider{
+        margin-bottom: 11rem;
         @media (max-width: 962px){
             margin-bottom: 5.1rem;
         }

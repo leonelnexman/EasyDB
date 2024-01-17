@@ -32,7 +32,7 @@ function scripts() {
 }
 
 function swiperScript() {
-    return src('node_modules/swiper/swiper-bundle.js')
+    return src('node_modules/swiper/swiper-bundle.min.js')
         .pipe(concat('swiper.js')) 
         .pipe(dest('src/js')) 
         .pipe(browserSync.stream());
