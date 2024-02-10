@@ -17,6 +17,72 @@ const MenuInstance = new Menu();
 const  ValidationInstance = new Validation();
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var calcForm = document.querySelector('.calc__form');
+
+    calcForm.addEventListener('change', function(event) {
+        handleFormChanges();
+    });
+
+    calcForm.addEventListener('input', function(event) {
+        handleFormChanges();
+    });
+
+    function handleFormChanges() {
+        var inputs = ['input_read', 'input_post', 'input_volume'];
+        var total_price = 0;
+    
+        inputs.forEach(function(inputId) {
+            var input = document.getElementById(inputId);
+            var parentElement = input.parentElement;
+            var numElement = parentElement.querySelector('.num');
+            numElement.textContent = input.value;
+    
+            var price;
+            if (inputId === 'input_read') {
+                price = input.value / 100 * 30;
+            } else if (inputId === 'input_post') {
+                price = input.value / 100 * 60;
+            } else if (inputId === 'input_volume') {
+                price = (input.value > 20) ? (input.value - 20) * 150 + 90 : 90;
+            }
+            total_price += price;
+        });
+    
+        var instance = (document.getElementById('checkbox').checked) ? 1500 : 0;
+        total_price += instance;
+    
+        document.getElementById('price').textContent = total_price + " ₽/мес";
+    }
+    
+});
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var inputRead = document.getElementById('input_read');
 
+    inputRead.addEventListener('input', function() {
+        // Получаем текущее значение ползунка
+        var currentValue = parseInt(inputRead.value);
+
+        // Вычисляем ближайшее значение, кратное 100
+        var nearestMultiple = Math.round(currentValue / 100) * 100;
+
+        // Устанавливаем значение ползунка на ближайшее кратное 100
+        inputRead.value = nearestMultiple;
+    });
+
+
+    var inputPost = document.getElementById('input_post');
+
+    inputPost.addEventListener('input', function() {
+        // Получаем текущее значение ползунка
+        var currentValue = parseInt(inputPost.value);
+
+        // Вычисляем ближайшее значение, кратное 100
+        var nearestMultiple = Math.round(currentValue / 100) * 100;
+
+        // Устанавливаем значение ползунка на ближайшее кратное 100
+        inputPost.value = nearestMultiple;
+    });
+});
