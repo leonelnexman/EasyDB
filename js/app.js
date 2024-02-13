@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             total_price += price;
         });
+
+        if (document.getElementById('input_read').value == 100 && document.getElementById('input_post').value == 100 && document.getElementById('input_volume').value == 20) {
+            total_price = 90;
+        }
     
         var instance = (document.getElementById('checkbox').checked) ? 1500 : 0;
         total_price += instance;
@@ -62,13 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var inputRead = document.getElementById('input_read');
 
     inputRead.addEventListener('input', function() {
-        // Получаем текущее значение ползунка
         var currentValue = parseInt(inputRead.value);
 
-        // Вычисляем ближайшее значение, кратное 100
         var nearestMultiple = Math.round(currentValue / 100) * 100;
 
-        // Устанавливаем значение ползунка на ближайшее кратное 100
         inputRead.value = nearestMultiple;
     });
 
@@ -76,13 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var inputPost = document.getElementById('input_post');
 
     inputPost.addEventListener('input', function() {
-        // Получаем текущее значение ползунка
         var currentValue = parseInt(inputPost.value);
 
-        // Вычисляем ближайшее значение, кратное 100
         var nearestMultiple = Math.round(currentValue / 100) * 100;
 
-        // Устанавливаем значение ползунка на ближайшее кратное 100
+      
         inputPost.value = nearestMultiple;
     });
 });
