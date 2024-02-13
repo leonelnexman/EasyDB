@@ -1050,6 +1050,12 @@
             display: flex;
             justify-content: space-between;
             padding-top: 0.1rem;
+
+            @media (max-width: 962px){
+                width: 105%;
+                margin-left: -1rem;
+            }
+            
             span{
                 font-size: 1.2rem;
             }
@@ -1175,7 +1181,7 @@
     }
 
     &__itog{
-        margin-top: 4.5rem;
+        margin-top: 4.2rem;
         width: 100%;
         background-color: $primary;
         padding: 2.8rem 4rem 2.5rem 5.5rem;
@@ -2098,6 +2104,11 @@
 .calc__form input[type="range"]{
     position: relative;
     z-index: 1;
+
+    @media (max-width: 962px){
+        width: 103%;
+        margin-left: -0.5rem;
+    }
 }
 
 .input-box{
@@ -2113,3 +2124,46 @@
         visibility: visible;
     }
 }
+
+.calc__range-top span{
+    position: relative;
+    svg{
+        cursor: pointer;
+        &:hover{
+            path:nth-child(1){
+                fill: #6B747C;
+                transition: all 0.3s;
+            }
+            path:nth-child(2){
+                stroke: #fff;
+                 transition: all 0.3s;
+            }
+            path:nth-child(3){
+                stroke: #fff;
+                transition: all 0.3s;
+            }
+        }
+    }
+    &:hover{
+        .info-content{
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s;
+            z-index: 77;
+        }
+    }
+}
+
+.info-content{
+    position: absolute;
+    bottom: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 19.2rem 0rem rgba(0,0,0,.06);
+    width: 33rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
