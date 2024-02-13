@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             total_price = 90;
         }
     
-        var instance = (document.getElementById('checkbox').checked) ? 1500 : 0;
+        var instance = (document.getElementById('checkbox').checked) ? 15000 : 0;
         total_price += instance;
     
         document.getElementById('price').textContent = total_price + " ₽/мес";
