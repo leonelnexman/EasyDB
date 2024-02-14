@@ -8,6 +8,7 @@ export class Modal {
         const openModalBtn = event.target.closest('.open-modal');
         if (openModalBtn) {
           modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; 
         }
       });
 
@@ -37,6 +38,7 @@ export class Modal {
 
     const closeModal = () => {
       document.getElementById('myModal').style.display = '';
+      document.body.style.overflow = '';
       const modalContent = document.querySelector('.modal__content');
       modalContent.classList.remove('successfully', 'error');
     };
