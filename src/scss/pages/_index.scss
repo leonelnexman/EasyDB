@@ -1059,9 +1059,11 @@
             border-radius: 50%;
             background: $primary;
             -webkit-appearance: none;
-            margin-top: -0.8rem;
+            margin-top: -0.55rem;
             border: 0.2rem solid $white;
-
+            @media (max-width: 962px){
+                margin-top: -0.8rem;
+            }
             &:hover{
                 background-color: $hover;
                 transition: all 0.3s;
