@@ -85,3 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
         inputPost.value = nearestMultiple;
     });
 });
+
+var elements = document.querySelectorAll('.aditions__col');
+
+elements.forEach(function(element) {
+    if (!element.innerHTML.trim()) {
+        var spanElement = document.createElement('span');
+        spanElement.classList.add('span');
+        element.appendChild(spanElement);
+    }
+});
