@@ -1059,8 +1059,13 @@
             border-radius: 50%;
             background: $primary;
             -webkit-appearance: none;
-            margin-top: -0.55rem;
+            margin-top: -0.5rem;
             border: 0.2rem solid $white;
+            @media (max-width: 1440px){
+                height: 1.3rem;
+                width: 1.3rem;
+                margin-top: -0.9rem;
+            }
             @media (max-width: 962px){
                 margin-top: -0.8rem;
             }
@@ -1077,8 +1082,10 @@
         .digit{
             display: flex;
             justify-content: space-between;
-            padding-top: 0.1rem;
-
+            padding-top: 0.5rem;
+            @media (max-width: 1440px){
+                padding-top: 0.7rem;
+            }
             @media (max-width: 962px){
                 width: 105%;
                 margin-left: -1rem;
@@ -2193,5 +2200,17 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
+}
+
+.aditions__col span{
+    display: block;
+    width: 2.3rem;
+    height: 0.2rem;
+    background-color: #D1DAE3;
+}
+
+.aditions__col:nth-child(2){
+    display: flex;
+    align-items: center;
 }
 
